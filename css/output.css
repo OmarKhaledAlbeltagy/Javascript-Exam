@@ -2058,7 +2058,7 @@ video {
 }
 
 .bg-\[url\(\'\/images\/hero2\.jpg\'\)\] {
-  background-image: url('/images/hero2.jpg');
+  background-image: url('../images/hero2.jpg');
 }
 
 .bg-gradient-to-r {
