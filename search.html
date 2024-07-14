@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+ 
+    </style>
+</head>
+<body class="bg-[url('/images/hero2.jpg')] bg-cover bg-fixed">
+
+    <div class="loader hidden">
+        <div class="animate-bounce text-white text-center">
+            <i class="fa-solid fa-utensils fa-2xl"></i>
+            <div>Loading</div>
+        </div>
+      </div>
+
+      
+
+
+
+    <nav class="fixed left-0 top-0 h-full z-30">
+        <div class="container h-full">
+    
+            <div id="navContainer" class="grid grid-cols-5 h-full -translate-x-60  transition-all duration-500 closed">
+    
+                <div class="col-span-4 h-full w-60 ps-5 pt-5 bg-gradient-to-r from-black to-slate-800">
+                    <ul id="menuList" class="list-none relative top-full">
+                        <li class="text-white text-xl mb-3 hover:text-red-400"><a href="index.html">Home</a></li>
+                        <li class="text-red-700 text-xl mb-3"><a href="search.html">Search</a></li>
+                        <li class="text-white text-xl mb-3 hover:text-red-400"><a href="categories.html">Categories</a></li>
+                        <li class="text-white text-xl mb-3 hover:text-red-400"><a href="area.html">Area</a></li>
+                        <li class="text-white text-xl mb-3 hover:text-red-400"><a href="ingredients.html">Ingredients</a></li>
+                        <li class="text-white text-xl mb-3 hover:text-red-400"><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-span-1 bg-white h-full flex justify-center items-center text-4xl text-gray-800">
+                    <span id="menuButton" class="cursor-pointer">
+                        <i id="menuIcon" class="fa-solid fa-bars"></i>
+                    </span>
+                </div>
+    
+            </div>
+    
+        </div>
+    </nav>
+
+<main class="relative h-full">
+
+<div id="modal" class="overflow-y-auto justify-center items-center w-5/6 max-w-full start-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 fixed z-50 bg-gradient-to-tr from-red-950 to-black text-gray-300 rounded-lg hidden">
+    <div class="closeModal absolute top-0 left-full -translate-x-full cursor-pointer pt-5 pr-5 group"><i class="fa-solid fa-xmark fa-2xl group-hover:text-red-800 transition-colors duration-500"></i></div>
+        <div class="container w-full h-full p-10">
+            <div class="grid grid-cols-6 gap-x-10" id="modalResult">
+        
+
+            </div>
+        </div>
+</div>
+
+<section class="relative z-30 pt-10 w-3/4 mx-auto start-10">
+
+
+    <form class="w-full mx-auto flex">
+        <div class="w-1/2 m-3">
+          <label for="email" class="block mb-2 text-lg font-medium text-white">Search By Name</label>
+          <input type="text" id="searchByName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Search By Name" />
+        </div>
+        <div class="w-1/2 m-3">
+          <label for="text" class="block mb-2 text-lg font-medium text-white">Search By First Letter</label>
+          <input type="text" id="searchByFL" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Search By First Letter" />
+        </div>
+      </form>
+      
+
+    <div class="container mt-6">
+        <div class="grid grid-cols-4 gap-5" id="mealsResult">
+       
+        </div>
+      </div>
+</section>
+
+</main>
+
+
+  
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
+    <script src="assets/jquery/dist/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/15e8ed2b84.js" crossorigin="anonymous"></script>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/search.js" type="module"></script>
+</body>
+</html>

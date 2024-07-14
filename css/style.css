@@ -1,0 +1,21 @@
+html, body {
+    min-height: 100vh !important;
+    margin: 0;
+    padding: 0;
+}
+
+
+.loading>*{
+    display: none !important;
+}
+
+.loading .loader{
+background-color: rgb(0, 0, 0);
+display: block !important;
+width: 100vw;
+height: 100vh;
+display: flex !important;
+justify-content: center;
+align-items: center;
+z-index: 99999999999;
+}

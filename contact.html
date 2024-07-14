@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+ 
+    </style>
+</head>
+<body class="bg-[url('/images/hero2.jpg')] bg-cover bg-fixed">
+
+    <div class="loader hidden">
+        <div class="animate-bounce text-white text-center">
+            <i class="fa-solid fa-utensils fa-2xl"></i>
+            <div>Loading</div>
+        </div>
+      </div>
+
+      
+
+
+
+    <nav class="fixed left-0 top-0 h-full z-30">
+        <div class="container h-full">
+    
+            <div id="navContainer" class="grid grid-cols-5 h-full -translate-x-60  transition-all duration-500 closed">
+    
+                <div class="col-span-4 h-full w-60 ps-5 pt-5 bg-gradient-to-r from-black to-slate-800">
+                    <ul id="menuList" class="list-none relative top-full">
+                        <li class="text-white text-xl mb-3 hover:text-red-400"><a href="index.html">Home</a></li>
+                        <li class="text-white text-xl mb-3 hover:text-red-400"><a href="search.html">Search</a></li>
+                        <li class="text-white text-xl mb-3 hover:text-red-400"><a href="categories.html">Categories</a></li>
+                        <li class="text-white text-xl mb-3 hover:text-red-400"><a href="area.html">Area</a></li>
+                        <li class="text-white text-xl mb-3 hover:text-red-400"><a href="ingredients.html">Ingredients</a></li>
+                        <li class="text-red-700 text-xl mb-3"><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-span-1 bg-white h-full flex justify-center items-center text-4xl text-gray-800">
+                    <span id="menuButton" class="cursor-pointer">
+                        <i id="menuIcon" class="fa-solid fa-bars"></i>
+                    </span>
+                </div>
+    
+            </div>
+    
+        </div>
+    </nav>
+
+<main class="relative h-full">
+
+<section class="relative z-30 pt-10 w-3/4 mx-auto start-10">
+    <!-- npx tailwindcss -i ./css/input.css -o ./css/output.css --watch -->
+
+    <form class="w-full mx-auto bg-neutral-800 p-7 rounded-lg text-gray-300" id="contactForm">
+        <legend class="text-center text-3xl ">Contact us</legend>
+
+        <div class="grid grid-cols-2">
+            <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1 2xl:col-span-1 m-3">
+                <label for="nameInput" class="block mb-2 text-lg font-medium">Name<span class="text-red-700">*</span></label>
+                <input type="text" name="name" id="nameInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 contactFormInput" placeholder="Enter your Name" />
+                <small class="text-red-700 hidden">Name minimum length is 3 characters</small>
+              </div>
+              <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1 2xl:col-span-1 m-3">
+                <label for="emailInput" class="block mb-2 text-lg font-medium">Email<span class="text-red-700">*</span></label>
+                <input type="email" name="email" id="emailInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 contactFormInput" placeholder="Enter your Email" />
+                <small class="text-red-700 hidden">Enter a valid email</small>
+              </div>
+            <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1 2xl:col-span-1 m-3">
+                <label for="phoneInput" class="block mb-2 text-lg font-medium">Phone<span class="text-red-700">*</span></label>
+                <input type="text" name="phone" id="phoneInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 contactFormInput" placeholder="Enter your Phone" />
+                <small class="text-red-700 hidden">Enter a valid Egyptian mobile number</small>
+              </div>
+              <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1 2xl:col-span-1 m-3">
+                <label for="ageInput" class="block mb-2 text-lg font-medium">Age<span class="text-red-700">*</span></label>
+                <input type="number" name="age" id="ageInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 contactFormInput" placeholder="Enter your Age" />
+                <small class="text-red-700 hidden">Age must be between 16 and 99</small>
+              </div>
+            <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1 2xl:col-span-1 m-3">
+                <label for="passwordInput" class="block mb-2 text-lg font-medium">Password<span class="text-red-700">*</span></label>
+                <input type="password" name="password" id="passwordInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 contactFormInput" placeholder="Enter Password" />
+                <small class="text-red-700 hidden">passwrod must be 7 characters at least contains number, letter and special character</small>
+              </div>
+              <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1 2xl:col-span-1 m-3">
+                <label for="repasswordInput" class="block mb-2 text-lg font-medium">Repassword<span class="text-red-700">*</span></label>
+                <input type="password" name="repassword" id="repasswordInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 contactFormInput" placeholder="Repeat password" />
+                <small class="text-red-700 hidden">repeated password doesn't match</small>
+              </div>
+
+              <div class="text-center col-span-2">
+                <button type="submit" id="contactFormSubmit" disabled class="bg-blue-300 text-gray-100 font-bold py-2 px-10 rounded transition-colors duration-500 m-2 cursor-not-allowed">Submit</button>
+              </div>
+        </div>
+
+     
+
+       
+      </form>
+</section>
+
+</main>
+
+
+  
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
+    <script src="assets/jquery/dist/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/15e8ed2b84.js" crossorigin="anonymous"></script>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/contact.js" type="module"></script>
+</body>
+</html>
