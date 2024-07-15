@@ -9,8 +9,8 @@ export default class Api{
 
 
     async getData(){
-        var response = await fetch(this.url,{method:this.method});
-        var data = await response.json();
+        let response = await fetch(this.url,{method:this.method});
+        let data = await response.json();
         return data; 
     }
     

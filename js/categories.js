@@ -14,7 +14,7 @@ $(window).on('load', function () {
 
    $("#categoriesResult").on('click','.categoryCard',async function(){
       display.startLoader();
-      var categoryName = $(this).attr('category-name');
+      let categoryName = $(this).attr('category-name');
       let api = new Api('https://www.themealdb.com/api/json/v1/1/filter.php?c='+categoryName,"get");
       let data = await api.getData();
 

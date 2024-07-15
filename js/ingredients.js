@@ -16,7 +16,7 @@ $(window).on('load', function () {
 
    $("#ingredientsResult").on('click','.ingredientCard',async function(){
       display.startLoader();
-      var ingredientName = $(this).attr('ingredient-name');
+      let ingredientName = $(this).attr('ingredient-name');
       let api = new Api('https://www.themealdb.com/api/json/v1/1/filter.php?i='+ingredientName,"get");
       let data = await api.getData();
 

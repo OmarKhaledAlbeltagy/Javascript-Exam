@@ -6,7 +6,6 @@ $(window).on('load', function () {
     let phoneInput = $("#phoneInput");
     let ageInput = $("#ageInput");
     let passwordInput = $("#passwordInput");
-    let repasswordInput = $("#repasswordInput");
     let submitButton = $("#contactFormSubmit");
 
     let nameRegex = /^[a-zA-Z ]{3,}$/;
@@ -16,10 +15,13 @@ $(window).on('load', function () {
     let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[^\w])[A-Za-z\d\W]{7,}$/;
 
 
+
+
+
     $("input").on('keyup', async function () {
-        var element = $(this);
+        let element = $(this);
         element.next('small').addClass('hidden')
-        let validationResult = await validation(element);
+        let validationResult = await InputValidation(element);
 
         if (validationResult == false) {
             element.removeClass('valid')
@@ -33,7 +35,7 @@ $(window).on('load', function () {
 
         else {
             element.addClass('valid');
-            var form = element.closest('form');
+            let form = element.closest('form');
             let formValidationResult = await checkFormValidationStatus(form);
             if (formValidationResult) {
                 submitButton.removeAttr('disabled');
@@ -54,7 +56,7 @@ $(window).on('load', function () {
 
 
 
-    async function validation(element) {
+    async function InputValidation(element) {
 
         let elementName = element.attr('name');
 
@@ -74,11 +76,8 @@ $(window).on('load', function () {
             case "password":
                 return passwordRegex.test(element.val());
                 break;
-                case "repassword":
-                    return element.val() == passwordInput.val();
-                    break;
-            default:
-                return true;
+            case "repassword":
+                return element.val() == passwordInput.val();
                 break;
         }
 
@@ -86,7 +85,7 @@ $(window).on('load', function () {
     }
 
     async function checkFormValidationStatus() {
-        var isValid = true;
+        let isValid = true;
         $.each($(".contactFormInput"), function () {
             if ($(this).hasClass('valid') == false) {
                 isValid = false;
@@ -95,5 +94,33 @@ $(window).on('load', function () {
         return isValid;
     }
 
+
+
+    $("#contactForm").on('submit',function(e){
+        e.preventDefault();
+        Swal.fire({
+            title: "Success",
+            icon: "success",
+            html: `refresh in <strong id="timer" class="text-3xl">3</strong> <span id="seconds">seconds</span>`,
+            showCloseButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: () => {
+              Swal.showLoading();
+              const timer = Swal.getPopup().querySelector("#timer");
+              timerInterval = setInterval(() => {
+                timer.textContent = `${(Swal.getTimerLeft()/1000).toFixed(0)}`;
+                if (timer.textContent == 1) {
+                    $("#seconds").text('second')
+                }
+                if (timer.textContent == 0) {
+                    window.location.reload()
+                }
+              }, 1000);
+            }
+          }).then((result) => {
+            window.location.reload();
+          });
+    })
 
 })

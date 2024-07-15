@@ -15,7 +15,7 @@ $(window).on('load', function () {
 
    $("#areasResult").on('click','.areaCard',async function(){
       display.startLoader();
-      var areaName = $(this).attr('area-name');
+      let areaName = $(this).attr('area-name');
       let api = new Api('https://www.themealdb.com/api/json/v1/1/filter.php?a='+areaName,"get");
       let data = await api.getData();
       

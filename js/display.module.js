@@ -49,7 +49,7 @@ export default class Display{
     }
 
     showMealList(){
-        var html = '';
+        let html = '';
         $.each(this.data.meals,function(){
             
             html += `<div class="mealCard relative overflow-hidden group border-dashed border-2 border-gray-600 cursor-pointer col-span-1 " meal-id="${this.idMeal}">
@@ -74,7 +74,7 @@ export default class Display{
 
        
 
-        var ing = await this.getIngredientArray(meal);
+        let ing = await this.getIngredientArray(meal);
 
         let srcBtn = "";
         let youtubeBtn = ""
@@ -147,7 +147,7 @@ export default class Display{
     }
 
     showCategoriesList(){
-        var html = '';
+        let html = '';
         $.each(this.data.categories,function(){
             
             html += `  <div class="categoryCard relative overflow-hidden group border-dashed border-2 border-gray-600 cursor-pointer col-span-1 " category-name="${this.strCategory}">
@@ -168,7 +168,7 @@ export default class Display{
     }
 
     showIngredientList(){
-        var html = '';
+        let html = '';
         $.each(this.data.meals,function(){
             
             html += `  <div class="ingredientCard h-72 relative overflow-hidden group border-dashed border-2 border-gray-600 cursor-pointer col-span-1 " ingredient-name="${this.strIngredient}">
@@ -188,7 +188,7 @@ export default class Display{
     }
 
     showAreasList(){
-        var html = '';
+        let html = '';
         $.each(this.data.meals,function(){
             
             html += `  <div class="areaCard h-72 relative overflow-hidden group border-dashed border-2 border-gray-600 cursor-pointer col-span-1 " area-name="${this.strArea}">
@@ -212,7 +212,7 @@ export default class Display{
     }
 
     async  getIngredientArray(obj){
-        var res = [];
+        let res = [];
         if (obj.strIngredient1 != null && obj.strIngredient1 != "" && obj.strIngredient1 != undefined) {
             res.push(obj.strMeasure1+" "+obj.strIngredient1)
         }

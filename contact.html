@@ -60,34 +60,34 @@
 
         <div class="grid grid-cols-2">
             <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1 2xl:col-span-1 m-3">
-                <label for="nameInput" class="block mb-2 text-lg font-medium">Name<span class="text-red-700">*</span></label>
+                <label for="nameInput" class="block mb-2 text-lg font-medium">Name<span class="text-red-500">*</span></label>
                 <input type="text" name="name" id="nameInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 contactFormInput" placeholder="Enter your Name" />
-                <small class="text-red-700 hidden">Name minimum length is 3 characters</small>
+                <small class="text-red-500 hidden">Name minimum length is 3 characters and only letter</small>
               </div>
               <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1 2xl:col-span-1 m-3">
-                <label for="emailInput" class="block mb-2 text-lg font-medium">Email<span class="text-red-700">*</span></label>
+                <label for="emailInput" class="block mb-2 text-lg font-medium">Email<span class="text-red-500">*</span></label>
                 <input type="email" name="email" id="emailInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 contactFormInput" placeholder="Enter your Email" />
-                <small class="text-red-700 hidden">Enter a valid email</small>
+                <small class="text-red-500 hidden">Enter a valid email</small>
               </div>
             <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1 2xl:col-span-1 m-3">
-                <label for="phoneInput" class="block mb-2 text-lg font-medium">Phone<span class="text-red-700">*</span></label>
+                <label for="phoneInput" class="block mb-2 text-lg font-medium">Phone<span class="text-red-500">*</span></label>
                 <input type="text" name="phone" id="phoneInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 contactFormInput" placeholder="Enter your Phone" />
-                <small class="text-red-700 hidden">Enter a valid Egyptian mobile number</small>
+                <small class="text-red-500 hidden">Enter a valid Egyptian mobile number</small>
               </div>
               <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1 2xl:col-span-1 m-3">
-                <label for="ageInput" class="block mb-2 text-lg font-medium">Age<span class="text-red-700">*</span></label>
+                <label for="ageInput" class="block mb-2 text-lg font-medium">Age<span class="text-red-500">*</span></label>
                 <input type="number" name="age" id="ageInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 contactFormInput" placeholder="Enter your Age" />
-                <small class="text-red-700 hidden">Age must be between 16 and 99</small>
+                <small class="text-red-500 hidden">Age must be between 16 and 99</small>
               </div>
             <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1 2xl:col-span-1 m-3">
-                <label for="passwordInput" class="block mb-2 text-lg font-medium">Password<span class="text-red-700">*</span></label>
+                <label for="passwordInput" class="block mb-2 text-lg font-medium">Password<span class="text-red-500">*</span></label>
                 <input type="password" name="password" id="passwordInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 contactFormInput" placeholder="Enter Password" />
-                <small class="text-red-700 hidden">passwrod must be 7 characters at least contains number, letter and special character</small>
+                <small class="text-red-500 hidden">passwrod must be 7 characters at least contains number, letter and special character</small>
               </div>
               <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1 2xl:col-span-1 m-3">
-                <label for="repasswordInput" class="block mb-2 text-lg font-medium">Repassword<span class="text-red-700">*</span></label>
+                <label for="repasswordInput" class="block mb-2 text-lg font-medium">Repassword<span class="text-red-500">*</span></label>
                 <input type="password" name="repassword" id="repasswordInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 contactFormInput" placeholder="Repeat password" />
-                <small class="text-red-700 hidden">repeated password doesn't match</small>
+                <small class="text-red-500 hidden">repeated password doesn't match</small>
               </div>
 
               <div class="text-center col-span-2">
@@ -109,6 +109,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
     <script src="assets/jquery/dist/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/15e8ed2b84.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/main.js" type="module"></script>
     <script src="js/contact.js" type="module"></script>
 </body>
